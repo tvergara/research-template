@@ -7,7 +7,12 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+wandb = "^0.19.8"
+lightning = "^2.5.0.post0"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
 
 [build-system]
 requires = ["poetry-core"]
