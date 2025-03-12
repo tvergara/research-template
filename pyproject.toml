@@ -6,7 +6,7 @@ authors = ["tvergara <tomvergara@uc.cl>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.11"
 wandb = "^0.19.8"
 lightning = "^2.5.0.post0"
 
@@ -16,6 +16,7 @@ pytest = "^8.3.5"
 black = "^25.1.0"
 flake8 = "^7.1.2"
 isort = "^6.0.1"
+pre-commit = "^4.1.0"
 
 [build-system]
 requires = ["poetry-core"]
@@ -23,7 +24,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 line-length = 100
-target-version = ['py312']
+target-version = ['py311']
 
 [tool.isort]
 profile = "black"
