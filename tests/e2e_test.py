@@ -1,2 +1,2 @@
-def test_e2e():
+def test_e2e() -> None:
     assert True

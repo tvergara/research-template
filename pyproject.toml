@@ -4,11 +4,14 @@ version = "0.1.0"
 description = ""
 authors = ["tvergara <tomvergara@uc.cl>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
 wandb = "^0.19.8"
 lightning = "^2.5.0.post0"
+hydra-core = "^1.3.2"
+flake8-pyproject = "^1.2.3"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -17,6 +20,9 @@ black = "^25.1.0"
 flake8 = "^7.1.2"
 isort = "^6.0.1"
 pre-commit = "^4.1.0"
+flake8-annotations = "^3.1.1"
+mypy = "^1.15.0"
+flake8-pyproject = "^1.2.3"
 
 [build-system]
 requires = ["poetry-core"]
@@ -30,5 +36,15 @@ target-version = ['py311']
 profile = "black"
 line_length = 100
 
-[flake8]
+[tool.flake8]
 max-line-length = 100
+enable-extensions = "ANN"
+ignore = ["ANN101"]
+
+
+[tool.mypy]
+python_version = "3.11"
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+warn_return_any = true
