@@ -17,6 +17,8 @@ black = "^25.1.0"
 flake8 = "^7.1.2"
 isort = "^6.0.1"
 pre-commit = "^4.1.0"
+flake8-annotations = "^3.1.1"
+mypy = "^1.15.0"
 
 [build-system]
 requires = ["poetry-core"]
@@ -32,3 +34,11 @@ line_length = 100
 
 [flake8]
 max-line-length = 100
+enable-extensions = "ANN"
+
+[tool.mypy]
+python_version = "3.11"
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+warn_return_any = true

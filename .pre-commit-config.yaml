@@ -20,3 +20,7 @@ repos:
       - id: autoflake
         args: [--remove-all-unused-imports, --in-place, --recursive]
 
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: 'f40886d'
+    hooks:
+      - id: mypy
