@@ -8,7 +8,7 @@ from omegaconf import DictConfig
 
 
 class DefaultModule(pl.LightningModule):
-    def __init__(self, cfg: DictConfig):
+    def __init__(self, cfg: DictConfig) -> None:
         super().__init__()
         self.save_hyperparameters(cfg)
         self.layer = nn.Linear(10, 1)
