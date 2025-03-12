@@ -1,5 +1,8 @@
+import os
+
 import hydra
 import pytorch_lightning as pl
+import wandb
 from omegaconf import DictConfig
 from pytorch_lightning.loggers import WandbLogger
 
@@ -10,6 +13,7 @@ from src.model import DefaultModule
 def main(cfg: DictConfig) -> None:
     model = DefaultModule(cfg)
 
+    wandb.login(key=os.getenv("WANDB_API_KEY"))
     logger = WandbLogger(
         project=cfg.wandb.project,
         entity=cfg.wandb.entity,
